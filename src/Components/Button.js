@@ -21,15 +21,15 @@ const Button = ({label, width, backgroundColor, onPress}) => {
 
 const styles = StyleSheet.create({
   button: {
-    height: hp('10%'),
-    borderRadius: 10,
+    height: hp('9%'),
+    borderRadius: 17,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     textAlign: 'center',
     fontWeight: '500',
-    fontSize: wp(4),
+    fontSize: wp(4.5),
     color: 'white',
   },
 });

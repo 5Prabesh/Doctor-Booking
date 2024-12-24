@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, StatusBar} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Button from '../Components/Button';
@@ -10,6 +10,7 @@ import {
 const OnBoardingScreen = ({navigation}) => {
   return (
     <LinearGradient colors={['#6942BB', '#832391']} style={styles.Container}>
+      <StatusBar backgroundColor={'#6942BB'} barStyle={'light-content'} hidden={false} />
       <View style={styles.logoContainer}>
         <Text style={styles.logoText}>Doctor</Text>
       </View>
