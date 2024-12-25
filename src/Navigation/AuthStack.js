@@ -4,6 +4,7 @@ import OnBoardingScreen from '../AuthScreens/OnBoardingScreen';
 import RegisterScreen from '../AuthScreens/RegisterScreen';
 import LoginScreen from '../AuthScreens/LoginScreen';
 import ForgotPasswordScreen from '../AuthScreens/ForgotPasswordScreen';
+import ChangePasswordScreen from '../AuthScreens/ChangePasswordScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ const AuthStack = () => {
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name='ForgotPasswordScreen' component={ForgotPasswordScreen} />
+        <Stack.Screen name='ChangePasswordScreen' component={ChangePasswordScreen} />
       </Stack.Navigator>
   );
 };

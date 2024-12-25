@@ -1,23 +1,23 @@
-import React from 'react';
 import {
   View,
   Text,
-  ScrollView,
   StyleSheet,
-  TouchableOpacity,
+  ScrollView,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
+import React from 'react';
+import Icon from 'react-native-vector-icons/AntDesign';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Icon from 'react-native-vector-icons/AntDesign';
 import InputField from '../Components/InputField';
 import Button from '../Components/Button';
 
-const ForgotPasswordScreen = ({navigation}) => {
+const ChangePasswordScreen = ({navigation}) => {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.Container}>
       <StatusBar
         backgroundColor={'#FFFFFF'}
         barStyle={'dark-content'}
@@ -31,19 +31,25 @@ const ForgotPasswordScreen = ({navigation}) => {
           >
           <Icon name="arrowleft" size={wp(8)} color={'#6C5DD3'} />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Reset Password</Text>
+        <Text style={styles.headerText}>Change Password</Text>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.descText}>
-          Please enter your email account to reset your password
+          Please enter your new password to change password
         </Text>
       </View>
       <View style={styles.inputContainer}>
         <InputField
-          label={'Email'}
-          inputType={'text'}
+          label={'New password'}
+          inputType={'password'}
           keyboardType={'text'}
-          iconName={'email'}
+          iconName={'lock'}
+        />
+        <InputField
+          label={'Confirm new password'}
+          inputType={'password'}
+          keyboardType={'text'}
+          iconName={'lock'}
         />
       </View>
       <View style={styles.buttonContainer}>
@@ -51,7 +57,7 @@ const ForgotPasswordScreen = ({navigation}) => {
           label={'Submit'}
           width={wp('90%')}
           backgroundColor={'#6C5DD3'}
-          onPress={() => navigation.navigate('ChangePasswordScreen')}
+          onPress={()=>navigation.navigate('ChangePasswordScreen')}
         />
       </View>
     </ScrollView>
@@ -59,7 +65,7 @@ const ForgotPasswordScreen = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  Container: {
     backgroundColor: 'white',
     flexGrow: 1,
   },
@@ -88,11 +94,12 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     marginTop: hp(7),
+    gap: 20
   },
-  buttonContainer: {
-    marginTop: hp(5),
-    alignItems: 'center',
-  },
+  buttonContainer:{
+    marginTop:hp(5),
+    alignItems:'center'
+  }
 });
 
-export default ForgotPasswordScreen;
+export default ChangePasswordScreen;

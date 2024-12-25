@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   }, 
   authFooter:{
     position:'relative', 
-    top:hp(18)
+    top:hp(20)
   }
 });
 

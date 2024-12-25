@@ -61,25 +61,25 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   headerContainer: {
-    marginTop: hp('10%'),
+    marginTop: hp(10),
   },
   headerText: {
     fontWeight: '800',
-    fontSize: wp('8%'),
+    fontSize: wp(8),
     textAlign: 'center',
   },
   inputContainer: {
-    marginTop: hp('6%'),
+    marginTop: hp(6),
     gap: 20,
   },
   buttonContainer:{
     display:'flex', 
     alignItems:'center', 
-    marginTop: hp('5%')
+    marginTop: hp(5)
   }, 
   authFooter:{
     position:'relative', 
-    top:hp('8%')
+    bottom:hp(-10)
   }
 });
 
