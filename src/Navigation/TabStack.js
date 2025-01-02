@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../TabScreens/HomeScreen';
@@ -11,20 +11,23 @@ import {
     heightPercentageToDP as hp,
   } from 'react-native-responsive-screen';
 
+
+
 const TabStack = () => {
   const Tab = createBottomTabNavigator();
+
   return (
     <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
-        tabBarStyle: {
-          backgroundColor: 'white',
-          height: hp(10),
-          borderColor: 'white',
-          position: 'static',
-          paddingTop:hp(2)
-        },
+    screenOptions={{
+      headerShown: false,
+      tabBarShowLabel: false,
+      tabBarStyle: {
+        backgroundColor: 'white',
+        height: hp(10),
+        borderColor: 'white',
+        paddingTop: hp(2),
+      },
+        
       }}
       initialRouteName="HomeScreen">
       <Tab.Screen
